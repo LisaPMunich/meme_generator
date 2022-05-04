@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+
+.nav{
+    width: 550px;
+    height: 65px;
+    left: 0;
+    top: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(163,72,189,0.6656057098765432) 42%, rgba(124,0,255,0.4619020061728395) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.nav-brand--image{
+    height: 100%;
+    margin-right: 7px;
+}
+
+.nav-brand--title{
+    font-weight: 700;
+    font-size: 1.3rem; /* 21px*/
+    margin-right: auto;
+}
+
+.nav--subtitle{
+    font-weight: 500;
+    font-size: 0.75rem; /*12px*/
+}
