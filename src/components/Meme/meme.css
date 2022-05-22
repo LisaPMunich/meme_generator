@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+
+main{
+    padding: 36px;
+    width: 550px;
+}
+
+.form{
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 17px;
+}
+
+.form--input{
+    font-family: "Karla", sans-serif;
+    border: 1px solid #D5D4D8;
+    border-radius: 5px;
+    text-indent: 5px;
+}
+
+.form--button{
+    font-family: "Karla", sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(163,72,189,0.6656057098765432) 42%, rgba(124,0,255,0.4619020061728395) 100%);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+
+    grid-column: 1/ 3;
+}
+
+.image{
+    width: 100%;
+    margin-top: 22px;
+
+    object-fit: contain;
+}

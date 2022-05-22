@@ -8,10 +8,10 @@ body {
 }
 
 .nav{
-    width: 550px;
     height: 65px;
     left: 0;
     top: 0;
+    width: 550px;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(163,72,189,0.6656057098765432) 42%, rgba(124,0,255,0.4619020061728395) 100%);
     color: white;
