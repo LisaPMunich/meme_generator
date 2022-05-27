@@ -13,7 +13,7 @@ body {
     top: 0;
     width: 550px;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(163,72,189,0.6656057098765432) 42%, rgba(124,0,255,0.4619020061728395) 100%);
+    background-image: linear-gradient(to right bottom, #08ae7f, #38bf72, #61ce5d, #8ddb41, #bce610);
     color: white;
     display: flex;
     align-items: center;

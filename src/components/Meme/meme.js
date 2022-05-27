@@ -1,24 +1,36 @@
-import React from 'react'
+import React, {useState} from 'react'
 import memesData from '../../memesdata.js'
 import './meme.css'
 
-/**
- * Challenge: Get a random image from the `memesData` array
- * when the "new meme image" button is clicked.
- *
- * Log the URL of the image to the console. (Don't worry
- * about displaying the image yet)
- */
 
 export default function Meme(){
 
-    const [image, setImage] = React.useState("")
+    const [image, setImage] = useState({
+        randomImage: "http://i.imgflip.com/1bij.jpg",
+        topText:"",
+        bottomText:""
+    })
+
+    const [allMemeImages, setAllMemeImages] = useState(memesData)
+
 
     function handleServeMeme(){
-        const memesArray = memesData.data.memes
+        const memesArray = allMemeImages.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
+        /**  */
         const url = memesArray[randomNumber].url
-        setImage(url)
+        setImage(prevImage => ({
+            ...prevImage,
+            randomImage: url
+        }))
+    }
+
+    function handleChange(event){
+        const{name, value} = event.target
+        setImage(prevImage =>({
+            ...prevImage,
+            [name]: value,
+        }))
     }
 
     return(
@@ -26,10 +38,18 @@ export default function Meme(){
             <div className="form">
                 <input className="form--input"
                        type="text"
-                       placeholder="top-text"/>
+                       placeholder="top text"
+                       name="topText"
+                       value={image.topText}
+                       onChange={handleChange}
+                />
                 <input className="form--input"
                        type="text"
-                       placeholder="buttom-text"/>
+                       placeholder="bottom text"
+                       name="bottomText"
+                       value={image.bottomText}
+                       onChange={handleChange}
+                />
                 <button
                     onClick={handleServeMeme}
                     className="form--button"
@@ -37,8 +57,11 @@ export default function Meme(){
                     Get a new meme image
                 </button>
             </div>
-            <img className="image" src={image} alt="meme image"
-                />
+            <div className="meme">
+                <img className="meme--image" src={image.randomImage}/>
+                <h2 className="meme--text top">{image.topText}</h2>
+                <h2 className="meme--text bottom">{image.bottomText}</h2>
+            </div>
         </main>
     )
 }
