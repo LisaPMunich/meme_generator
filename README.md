@@ -22,7 +22,7 @@ This project was built following a 5-hour-tutorial from Scrimba by Bob Ziroll (h
 <img src="https://user-images.githubusercontent.com/99111208/163397361-5126a0ff-a116-4a57-9773-c1878285b045.svg" alt="Heroku icon" width="30">
 </td>
 <td>
-<a href="">Click here to use my live app on Heroku</a>
+<a href="https://meme-generator-lisapmunich.herokuapp.com">Click here to use my live app on Heroku</a>
 </td>
 </tr>
 </table>
