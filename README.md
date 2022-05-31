@@ -35,4 +35,5 @@ This project was built following a 5-hour-tutorial from Scrimba by Bob Ziroll (h
 * conditional rendering
 * forms in React
 * side effects
+* css flexbox, grids
 
